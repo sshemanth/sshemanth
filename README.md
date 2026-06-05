@@ -6,13 +6,10 @@
 ### 🚀 Bridging the gap between intelligent theory and real-world medical application.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Computer_Vision-4CAF50?style=for-the-badge&logo=opencv&logoColor=white" /> 
   <img src="https://img.shields.io/badge/Deep_Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/Computer_Vision-4CAF50?style=for-the-badge&logo=opencv&logoColor=white" />
-  <img src="https://img.shields.io/badge/Data_Science-3776AB?style=for-the-badge&logo=pandas&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" />
+  <img src="https://img.shields.io/badge/Medical_Imaging-00BCD4?style=for-the-badge&logo=microsofthololens&logoColor=white" />
   <img src="https://img.shields.io/badge/MONAI-8A2BE2?style=for-the-badge&logo=appveyor&logoColor=white" />
-  <img src="https://img.shields.io/badge/ITK--SNAP-00BCD4?style=for-the-badge&logo=microsofthololens&logoColor=white" />
 </p>
 
 </div>

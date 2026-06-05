@@ -22,10 +22,3 @@ I am a Master’s student in Artificial Intelligence at the University of Techno
 * **Advanced Image Processing:** Developing and refining pipelines for medical image segmentation and feature extraction to enhance diagnostic precision.
 * **Diagnostic Research:** Leveraging deep learning architectures to analyze complex medical datasets, aiming to bridge the gap between theoretical models and real-world clinical applications.
 * **Computational Intelligence:** Applying innovative systems—such as neuro-fuzzy inference—to interpret intricate data patterns, ensuring that AI-driven solutions are both robust and interpretable.
-
-
-### 🌐 Let's Connect
-
-* **Email:** [sshemanthbollepalli@gmail.com](mailto:sshemanthbollepalli@gmail.com)
-* **ORCID:** [0009-0009-8684-6763](https://orcid.org/0009-0009-8684-6763)
-* **Location:** Sydney, Australia

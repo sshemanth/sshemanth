@@ -1,38 +1,54 @@
-<div align="center">
+# Hi, I'm Sri Sai Hemanth Bollepalli
 
-# Master’s Student in AI | University of Technology Sydney 
+Master’s student in Data Science and Artificial Intelligence at the University of Technology Sydney, focused on applied deep learning, medical imaging AI, computer vision, and cloud-based ML engineering.
 
----
-### Exploring applied deep learning for medical image segmentation, MRI analysis, and clinically motivated AI research.
+## Current Focus
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Medical_Image_Segmentation-00BCD4?style=for-the-badge&logo=microscope&logoColor=white" />
-  <img src="https://img.shields.io/badge/Applied_Deep_Learning-FF6F00?style=for-the-badge&logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/Computer_Vision-4CAF50?style=for-the-badge&logo=opencv&logoColor=white" />
-  <img src="https://img.shields.io/badge/nnU--Net-8A2BE2?style=for-the-badge&logo=python&logoColor=white" />
-</p>
+- Medical image segmentation using customized nnU-Net architectures
+- Brain metastasis and resection cavity segmentation from multi-modal MRI
+- Skin lesion diagnosis using multimodal image and metadata fusion
+- Computer vision systems for automated visual inspection
+- Reliable deep learning model evaluation, error analysis, and reproducible experimentation
 
-</div>
+## Featured Projects
 
----
+### Multi-Region Brain Metastasis and Resection Cavity Segmentation
 
-## About Me
+Research-focused medical imaging project using customized nnU-Net v2 architectures for multi-region segmentation from T1, contrast-enhanced T1, T2, and FLAIR MRI modalities.
 
-I am a Master’s student in Data Science and Artificial Intelligence at the University of Technology Sydney, with a strong interest in PhD research in medical AI, deep learning, and biomedical image analysis.
+**Topics:** Medical Image Segmentation, MRI Analysis, nnU-Net, PyTorch, Deep Learning, Model Evaluation
 
-My current research-focused project explores automated brain metastasis segmentation from multi-modal MRI using customized nnU-Net architectures. Through this work, I am developing practical experience in medical image segmentation, MRI image analysis, computer vision, PyTorch-based model customization, model evaluation, error analysis, and experiment-driven deep learning research.
+### Rare-Class-Aware Multimodal Skin Lesion Diagnosis
 
-My academic background includes artificial intelligence, deep learning and convolutional neural networks, data analytics, visual analytics, computational intelligence, research methodology, and the ethics of data and AI. These areas have strengthened my ability to connect technical implementation with research thinking, responsible AI, and scientific communication.
+End-to-end ISIC/MILK10k skin lesion diagnosis pipeline using paired clinical images, dermoscopic images, metadata fusion, rare-class oversampling, ConvNeXt-EfficientNet ensembling, GCP GPU training, and Dockerized inference.
 
----
+**Topics:** Medical Image Classification, Dermatology AI, PyTorch, ConvNeXt, EfficientNet, GCP, Docker
 
-## Research Interests
+### VisionAlloy: Automated Surface Defect Inspection
 
-- Medical image segmentation
-- Brain tumor and brain metastasis analysis
-- Multi-modal MRI analysis
-- Deep learning for healthcare
-- Computer vision in medical imaging
-- nnU-Net and U-Net based segmentation models
-- Model evaluation and error analysis
-- Responsible and clinically reliable AI
+Industrial computer vision system for metallic surface defect detection using YOLOv8, OpenCV, Streamlit, and deep learning. Supports image, batch, and video inspection with quality scoring and report generation.
+
+**Topics:** Object Detection, YOLOv8, Computer Vision, OpenCV, Streamlit, Industrial AI
+
+## Technical Skills
+
+**Deep Learning:** PyTorch, nnU-Net, YOLOv8, ConvNeXt, EfficientNet, Swin Transformer, CNNs  
+**Medical AI:** Medical Image Segmentation, Medical Image Classification, MRI Analysis, Dermatology AI  
+**Computer Vision:** OpenCV, Object Detection, Image Classification, Visual Inspection  
+**Data Science:** Python, NumPy, Pandas, Scikit-learn, Model Evaluation  
+**MLOps & Cloud:** Docker, Google Cloud Platform, Google Cloud Storage, Azure, Linux, CUDA, Weights & Biases  
+**Research:** Experiment Design, Cross-Validation, Error Analysis, Scientific Writing, Responsible AI
+
+## Certifications
+
+- Google Cloud Certified Professional Cloud Architect
+- Microsoft Certified: Azure Fundamentals
+- CS50 Computer Science Fundamentals
+
+## Interests
+
+Medical imaging AI, neuroimaging, biomedical image analysis, clinically reliable deep learning, trustworthy AI for healthcare, and applied computer vision.
+
+## Connect
+
+- LinkedIn: https://www.linkedin.com/in/sshemanth/

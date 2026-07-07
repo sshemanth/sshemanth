@@ -1,54 +1,62 @@
-# Hi, I'm Sri Sai Hemanth Bollepalli
+**AI Researcher & Master’s Student | University of Technology Sydney (UTS)**
 
-Master’s student in Data Science and Artificial Intelligence at the University of Technology Sydney, focused on applied deep learning, medical imaging AI, computer vision, and cloud-based ML engineering.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sshemanth/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sshemanth)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:srisaihemanth.bollepalli@student.uts.edu.au)
 
-## Current Focus
+> **Profile:** Master’s student in Artificial Intelligence bridging research-oriented experimentation with practical engineering. Focused on applied deep learning, medical AI, computer vision, and trustworthy AI systems across medical image segmentation, molecular property prediction, multimodal classification, and automated visual inspection.
 
-- Medical image segmentation using customized nnU-Net architectures
-- Brain metastasis and resection cavity segmentation from multi-modal MRI
-- Skin lesion diagnosis using multimodal image and metadata fusion
-- Computer vision systems for automated visual inspection
-- Reliable deep learning model evaluation, error analysis, and reproducible experimentation
+---
 
-## Featured Projects
+## 🛠️ Technical Arsenal
 
-### Multi-Region Brain Metastasis and Resection Cavity Segmentation
+### **Languages & Frameworks**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
-Research-focused medical imaging project using customized nnU-Net v2 architectures for multi-region segmentation from T1, contrast-enhanced T1, T2, and FLAIR MRI modalities.
+### **Deployment & MLOps**
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-**Topics:** Medical Image Segmentation, MRI Analysis, nnU-Net, PyTorch, Deep Learning, Model Evaluation
+### **Core Focus Areas**
+*   **Medical & Scientific AI:** Medical Image Segmentation, Neuroimaging AI, Dermatology AI, Molecular AI, Brain Tumor Analysis.
+*   **Deep Learning Architectures:** nnU-Net v2, ConvNeXt, EfficientNet, Swin Transformer, YOLOv8, GCN, GIN, ChemBERTa.
+*   **Trustworthy AI:** Monte Carlo Dropout Uncertainty, Conformal Prediction, Calibration, Applicability-Domain Analysis, Ensemble Agreement.
 
-### Rare-Class-Aware Multimodal Skin Lesion Diagnosis
+---
 
-End-to-end ISIC/MILK10k skin lesion diagnosis pipeline using paired clinical images, dermoscopic images, metadata fusion, rare-class oversampling, ConvNeXt-EfficientNet ensembling, GCP GPU training, and Dockerized inference.
+## 🚀 Research & Engineering Projects
 
-**Topics:** Medical Image Classification, Dermatology AI, PyTorch, ConvNeXt, EfficientNet, GCP, Docker
+### 🧠 Multi-Region Brain Metastasis & Resection Cavity Segmentation
+*Current Research Focus — Multi-modal MRI Analysis*
+*   Developing customized **nnU-Net v2** architectures to segment brain metastases and resection cavities from complex multi-modal MRI data.
+*   Gaining hands-on expertise in medical image preprocessing, region-based label design, and MRI analysis.
+*   Driving experiment-driven model development through deep supervision handling, custom PyTorch-based loss implementation, robust validation analysis, and error diagnosis.
 
-### VisionAlloy: Automated Surface Defect Inspection
+### 💊 TRUST-ADMET
+*Open-Source Python Framework for Trust-aware Drug Discovery*
+*   Architected a comprehensive framework for ADMET prediction integrating classical ML, Graph Neural Networks (GCN, GIN), and molecular transformers (ChemBERTa).
+*   Engineered a suite of reliability diagnostics to ensure trustworthy predictions, including applicability-domain analysis, calibration, conformal prediction, and MC Dropout.
+*   Managed the full software lifecycle, focusing on reproducible scientific software, Docker containerization, API development with FastAPI, Gradio UI, and publishing via GitHub and Zenodo.
 
-Industrial computer vision system for metallic surface defect detection using YOLOv8, OpenCV, Streamlit, and deep learning. Supports image, batch, and video inspection with quality scoring and report generation.
+### 🔬 Multimodal Skin Lesion Diagnosis
+*End-to-End Pipeline for the ISIC/MILK10k Challenge*
+*   Built a highly robust diagnostic system leveraging clinical images, dermoscopic images, and patient metadata.
+*   Tackled complex classification challenges using ConvNeXt, EfficientNet, and Swin Transformer models.
+*   Optimized performance via rare-class oversampling, 5-fold cross-validation, out-of-fold ensembling, and test-time augmentation.
+*   Executed GPU training on Google Cloud Platform (GCP) and packaged the final pipeline for Dockerized inference.
 
-**Topics:** Object Detection, YOLOv8, Computer Vision, OpenCV, Streamlit, Industrial AI
+### ⚙️ VisionAlloy
+*Industrial Surface Defect Inspection System*
+*   Developed an automated visual inspection tool for metallic surface quality analysis.
+*   Integrated **YOLOv8** and OpenCV for high-accuracy defect detection.
+*   Built and deployed an accessible frontend interface using Streamlit.
 
-## Technical Skills
+---
 
-**Deep Learning:** PyTorch, nnU-Net, YOLOv8, ConvNeXt, EfficientNet, Swin Transformer, CNNs  
-**Medical AI:** Medical Image Segmentation, Medical Image Classification, MRI Analysis, Dermatology AI  
-**Computer Vision:** OpenCV, Object Detection, Image Classification, Visual Inspection  
-**Data Science:** Python, NumPy, Pandas, Scikit-learn, Model Evaluation  
-**MLOps & Cloud:** Docker, Google Cloud Platform, Google Cloud Storage, Azure, Linux, CUDA, Weights & Biases  
-**Research:** Experiment Design, Cross-Validation, Error Analysis, Scientific Writing, Responsible AI
-
-## Certifications
-
-- Google Cloud Certified Professional Cloud Architect
-- Microsoft Certified: Azure Fundamentals
-- CS50 Computer Science Fundamentals
-
-## Interests
-
-Medical imaging AI, neuroimaging, biomedical image analysis, clinically reliable deep learning, trustworthy AI for healthcare, and applied computer vision.
-
-## Connect
-
-- LinkedIn: https://www.linkedin.com/in/sshemanth/
+## 🤝 Let's Connect
+I am actively looking to connect with professors, researchers, and technical teams working at the intersection of **Medical AI, Biomedical Image Analysis, Computer Vision, Drug-Discovery AI, and Trustworthy AI Systems**.

@@ -1,62 +1,74 @@
-**AI Researcher & Master’s Student | University of Technology Sydney (UTS)**
+# Sri Sai Hemanth Bollepalli
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sshemanth/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sshemanth)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:srisaihemanth.bollepalli@student.uts.edu.au)
+**Medical AI & Trustworthy Machine Learning Researcher**  
+Master of Artificial Intelligence candidate, University of Technology Sydney (UTS) — expected November 2026
 
-> **Profile:** Master’s student in Artificial Intelligence bridging research-oriented experimentation with practical engineering. Focused on applied deep learning, medical AI, computer vision, and trustworthy AI systems across medical image segmentation, molecular property prediction, multimodal classification, and automated visual inspection.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sshemanth/)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?logo=gmail&logoColor=white)](mailto:srisaihemanth.bollepalli@student.uts.edu.au)
 
----
+I develop reproducible AI methods for biomedical problems, with a current focus on **lesion-aware 3D medical image segmentation** and **trustworthy molecular property prediction**. My work emphasizes rigorous validation, failure analysis, calibration, uncertainty, and practical research software.
 
-## 🛠️ Technical Arsenal
+## Active research
 
-### **Languages & Frameworks**
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+### [LAResSeg — Lesion-Aware Brain Metastasis Segmentation](https://github.com/sshemanth/brain-tumor-segmentation)
 
-### **Deployment & MLOps**
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+> **Hidden-test result:** the best single **ResEncL V3** model (fold 0) achieved lesion-wise Dice scores of **0.7154 TC**, **0.6905 ET**, **0.6453 WT**, and **0.5674 RC** on the BraTS-MET Synapse hidden test set, with **0.6458 RC all-instance F1**.
 
-### **Core Focus Areas**
-*   **Medical & Scientific AI:** Medical Image Segmentation, Neuroimaging AI, Dermatology AI, Molecular AI, Brain Tumor Analysis.
-*   **Deep Learning Architectures:** nnU-Net v2, ConvNeXt, EfficientNet, Swin Transformer, YOLOv8, GCN, GIN, ChemBERTa.
-*   **Trustworthy AI:** Monte Carlo Dropout Uncertainty, Conformal Prediction, Calibration, Applicability-Domain Analysis, Ensemble Agreement.
+| Hidden-test metric | TC | ET | WT | RC |
+|---|---:|---:|---:|---:|
+| Lesion-wise Dice | **0.7154** | **0.6905** | **0.6453** | **0.5674** |
 
----
+I am developing a multi-region 3D MRI framework for whole tumor (WT), tumor core (TC), enhancing tumor (ET), and postoperative resection cavity (RC) segmentation from T1, T1c, T2, and FLAIR MRI.
 
-## 🚀 Research & Engineering Projects
+**Technical contributions**
 
-### 🧠 Multi-Region Brain Metastasis & Resection Cavity Segmentation
-*Current Research Focus — Multi-modal MRI Analysis*
-*   Developing customized **nnU-Net v2** architectures to segment brain metastases and resection cavities from complex multi-modal MRI data.
-*   Gaining hands-on expertise in medical image preprocessing, region-based label design, and MRI analysis.
-*   Driving experiment-driven model development through deep supervision handling, custom PyTorch-based loss implementation, robust validation analysis, and error diagnosis.
+- Adapted **nnU-Net v2** to a Residual Encoder Large backbone for multi-region metastasis and cavity segmentation.
+- Designed an **asymmetric region Tversky + BCE loss** to address severe lesion and RC class imbalance.
+- Established correct hierarchical region reconstruction and full-volume validation after identifying a fragile class-order failure mode.
+- Tuned region-specific post-processing; the best tested single-model setting uses an **RC probability threshold of 0.15** and a **200-voxel minimum component size**.
+- Demonstrated that unified multi-task learning outperformed RC-only binary variants; remaining folds and ensemble ablations are in progress.
 
-### 💊 TRUST-ADMET
-*Open-Source Python Framework for Trust-aware Drug Discovery*
-*   Architected a comprehensive framework for ADMET prediction integrating classical ML, Graph Neural Networks (GCN, GIN), and molecular transformers (ChemBERTa).
-*   Engineered a suite of reliability diagnostics to ensure trustworthy predictions, including applicability-domain analysis, calibration, conformal prediction, and MC Dropout.
-*   Managed the full software lifecycle, focusing on reproducible scientific software, Docker containerization, API development with FastAPI, Gradio UI, and publishing via GitHub and Zenodo.
-
-### 🔬 Multimodal Skin Lesion Diagnosis
-*End-to-End Pipeline for the ISIC/MILK10k Challenge*
-*   Built a highly robust diagnostic system leveraging clinical images, dermoscopic images, and patient metadata.
-*   Tackled complex classification challenges using ConvNeXt, EfficientNet, and Swin Transformer models.
-*   Optimized performance via rare-class oversampling, 5-fold cross-validation, out-of-fold ensembling, and test-time augmentation.
-*   Executed GPU training on Google Cloud Platform (GCP) and packaged the final pipeline for Dockerized inference.
-
-### ⚙️ VisionAlloy
-*Industrial Surface Defect Inspection System*
-*   Developed an automated visual inspection tool for metallic surface quality analysis.
-*   Integrated **YOLOv8** and OpenCV for high-accuracy defect detection.
-*   Built and deployed an accessible frontend interface using Streamlit.
+**Publication focus:** lesion-aware loss design, rare-region failure analysis, small-lesion sensitivity, and hidden-test generalization in heterogeneous multi-modal MRI.
 
 ---
 
-## 🤝 Let's Connect
-I am actively looking to connect with professors, researchers, and technical teams working at the intersection of **Medical AI, Biomedical Image Analysis, Computer Vision, Drug-Discovery AI, and Trustworthy AI Systems**.
+### [TRUST-ADMET — Trustworthy AI for Molecular Property Prediction](https://github.com/sshemanth/trust-admet)
+
+> **External-validation result:** a BBBP-trained Random Forest achieved **0.912 AUROC**, **0.941 AUPRC**, **0.580 MCC**, and **0.087 ECE** on **6,482** B3DB molecules after removing **1,325** molecules overlapping the training set.
+
+| Evaluation | Best model | Result |
+|---|---|---|
+| BBBP scaffold-split test, 5 seeds | Random Forest | AUROC **0.874 ± 0.005**; AUPRC **0.951 ± 0.002**; ECE **0.061 ± 0.016** |
+| ClinTox scaffold-split test, 5 seeds | GIN | AUROC **0.844 ± 0.019** |
+| Lipophilicity scaffold-split test, 5 seeds | GIN | RMSE **0.748 ± 0.012**; R² **0.604 ± 0.013** |
+| B3DB external validation, N = 6,482 | Random Forest | AUROC **0.912**; AUPRC **0.941** |
+
+TRUST-ADMET is an end-to-end framework that evaluates predictive performance together with whether an individual prediction should be trusted.
+
+**Technical contributions**
+
+- Benchmarked six model families—Random Forest, XGBoost, MLP, GCN, GIN, and ChemBERTa—across four classification and two regression endpoints using scaffold splits.
+- Integrated probability calibration, similarity- and physicochemical-space applicability domains, conformal prediction, Monte Carlo dropout, ensemble disagreement, and model-specific explainability.
+- Added overlap-controlled external validation to reduce train–test contamination when transferring BBBP models to B3DB.
+- Built configuration-driven experiments, automated benchmark and paper-asset generation, a CLI, FastAPI service, Gradio interface, Docker deployment, and reproducible research packaging.
+- Released the software as **v1.0.1** under the MIT License and archived it on Zenodo: [doi:10.5281/zenodo.20997792](https://doi.org/10.5281/zenodo.20997792).
+
+**Publication focus:** connecting accuracy with calibration, applicability domain, uncertainty, explainability, and independent external validation across model families.
+
+## Research interests
+
+- Robust and generalizable medical image segmentation
+- Small-lesion detection and postoperative MRI analysis
+- Uncertainty quantification, calibration, and failure-aware AI
+- Multimodal biomedical learning and clinical decision support
+- Trustworthy machine learning for drug discovery
+
+## Methods and tools
+
+**Python · PyTorch · nnU-Net v2 · PyTorch Geometric · RDKit · scikit-learn · XGBoost · Transformers · SimpleITK · NiBabel · Docker · GCP**
+
+## PhD and research collaboration
+
+I welcome conversations about PhD supervision and research collaboration in **medical AI, biomedical image analysis, trustworthy AI, and molecular machine learning**. I am particularly interested in work that combines methodological novelty with careful validation and clinically or scientifically meaningful evaluation.
+
+**Contact:** [srisaihemanth.bollepalli@student.uts.edu.au](mailto:srisaihemanth.bollepalli@student.uts.edu.au) · [LinkedIn](https://www.linkedin.com/in/sshemanth/)

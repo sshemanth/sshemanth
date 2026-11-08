@@ -71,17 +71,29 @@ Reports how accurate a prediction is and whether it can be trusted. v1.0.1 is ar
 
 Six model families compared (RF, XGBoost, MLP, GCN, GIN, ChemBERTa), with applicability domain checks, external validation after removing overlapping molecules, and a CLI, API, web demo and Docker image under the MIT License.
 
-### Multi-label knee MRI abnormality detection from report-derived labels
+### [Multi-label knee MRI abnormality detection from report-derived labels](https://github.com/sshemanth/knee-mri-weak-supervision)
 
-`RSNA knee MRI` `weak supervision` `Qwen` `MedGemma` `team of 2`
+`RSNA 2026 knee MRI` `weak supervision` `LLM labelling` `ConvNeXt` `team of 2`
 
-Detects 12 findings from knee MRI, trained on labels pulled from radiology reports instead of manual annotation. Reached **0.88 macro AUC**. For labelling, a local Qwen model scored 0.858 macro AUC on 58 gold-standard reports, matching my regex + MedGemma fusion (0.857).
+Detects 12 knee abnormalities on MRI without any expert image labels. Three report readers (regex, MedGemma-4B and a locally served Qwen 27B) score the radiology reports, and their average becomes the training labels. **0.880 macro AUC on the hidden test set**, 0.863 on 58 expert-labelled studies.
 
-### AeroTail: deep RL drone target following
+<img src="assets/knee-pipeline.svg" width="100%" alt="Knee MRI pipeline: reports scored by regex (0.683), MedGemma-4B (0.768) and Qwen 27B (0.858), fused into soft labels (0.870), which supervise a 2.5D ConvNeXt-Tiny with per-finding attention reaching 0.880 macro AUC on the hidden test." />
 
-`SAC` `PPO` `AirSim` `team project`
+<img src="https://raw.githubusercontent.com/sshemanth/knee-mri-weak-supervision/main/figures/fig1_inputs.png" width="100%" alt="The five MRI views the model reads: sagittal fluid-sensitive, sagittal other, coronal fluid-sensitive, coronal other and axial." />
 
-Autonomous visual target-following drone trained with deep reinforcement learning in AirSim. I ran the SAC and PPO experiments.
+<table>
+<tr>
+<td width="55%"><img src="https://raw.githubusercontent.com/sshemanth/knee-mri-weak-supervision/main/figures/fig2_auc_per_finding.png" alt="Per-finding ROC AUC with 95% bootstrap confidence intervals on 58 expert-labelled studies; macro 0.863. Highest: Baker's cyst and medial OA 0.97; lowest: MCL 0.69." /></td>
+<td width="45%"><img src="https://raw.githubusercontent.com/sshemanth/knee-mri-weak-supervision/main/figures/fig3_ACL.png" alt="ACL: slices the model weighted most, for a correct detection, a missed case and a false alarm." /></td>
+</tr>
+<tr>
+<td><sub>Per-finding AUC with 95% bootstrap CIs on the 58 expert-labelled studies.</sub></td>
+<td><sub>ACL: the slices the model's attention weighted most, for a hit, a miss and a false alarm.</sub></td>
+</tr>
+</table>
+
+- Better labels gave the biggest gain: adding the Qwen reader raised the hidden-test AUC from 0.842 to 0.865, more than a larger image model did.
+- The attention maps show the model leans on sagittal fluid-sensitive images, even for the MCL, which radiologists read on coronal images.
 
 ### In progress
 

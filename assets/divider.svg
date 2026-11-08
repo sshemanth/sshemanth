@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="14" viewBox="0 0 1200 14" aria-hidden="true">
-<style>.dot{animation:run 6s linear infinite}@keyframes run{from{transform:translateX(0)}to{transform:translateX(1040px)}}@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
-<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#4F8CFF" stop-opacity="0"/><stop offset=".5" stop-color="#4F8CFF"/><stop offset="1" stop-color="#4F8CFF" stop-opacity="0"/></linearGradient></defs>
-<rect y="6" width="1200" height="2" rx="1" fill="#4F8CFF" fill-opacity=".18"/>
-<rect class="dot" y="5" width="160" height="4" rx="2" fill="url(#g)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="14" viewBox="0 0 1200 14" aria-hidden="true"><style>.dot{animation:run 6s linear infinite}@keyframes run{to{transform:translateX(1040px)}}@media (prefers-reduced-motion: reduce){.dot{animation:none}}</style><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#4F8CFF" stop-opacity="0"/><stop offset=".5" stop-color="#4F8CFF"/><stop offset="1" stop-color="#4F8CFF" stop-opacity="0"/></linearGradient></defs><rect y="6" width="1200" height="2" rx="1" fill="#4F8CFF" fill-opacity=".18"/><rect class="dot" y="5" width="160" height="4" rx="2" fill="url(#g)"/></svg>

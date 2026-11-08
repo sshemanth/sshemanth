@@ -58,18 +58,28 @@ My challenge work, published as [*Region-Aware Residual Encoder nnU-Net for Mult
 
 ### [TRUST-ADMET: trustworthy molecular property prediction](https://github.com/sshemanth/trust-admet)
 
-`GNNs` `ChemBERTa` `conformal prediction` `calibration` `Docker`
+`GNNs` `ChemBERTa` `calibration` `applicability domain` `FastAPI` `Docker`
 
-Reports how accurate a prediction is and whether it can be trusted. v1.0.1 is archived on [Zenodo](https://doi.org/10.5281/zenodo.20997792).
+Most ADMET repositories report only AUROC or RMSE. TRUST-ADMET also answers whether a single prediction can be trusted, by checking calibration, applicability domain, uncertainty and explainability. v1.0.1 is archived on [Zenodo](https://doi.org/10.5281/zenodo.20997792).
 
-| Evaluation | Best model | Result |
+<img src="assets/trust-framework.svg" width="100%" alt="TRUST-ADMET framework: molecules become fingerprints, graphs or SMILES tokens; six model families train on random and scaffold splits; a trust layer adds calibration, applicability domain, uncertainty and explainability; results ship as a CLI, API, Gradio app and Docker image." />
+
+Six model families compared (RF, XGBoost, MLP, GCN, GIN, ChemBERTa) on scaffold splits across five seeds:
+
+| Dataset (scaffold split) | Best model | Result |
 |---|---|---|
-| BBBP, scaffold split, 5 seeds | Random Forest | AUROC 0.874 ± 0.005, AUPRC 0.951 ± 0.002, ECE 0.061 ± 0.016 |
-| ClinTox, scaffold split, 5 seeds | GIN | AUROC 0.844 ± 0.019 |
-| Lipophilicity, scaffold split, 5 seeds | GIN | RMSE 0.748 ± 0.012, R² 0.604 ± 0.013 |
+| BBBP | Random Forest | AUROC 0.874 ± 0.005, AUPRC 0.951 ± 0.002, ECE 0.061 ± 0.016 |
+| ClinTox | GIN | AUROC 0.844 ± 0.019 |
+| Lipophilicity | GIN | RMSE 0.748 ± 0.012, R² 0.604 ± 0.013 |
 | B3DB external validation (N = 6,482) | Random Forest | AUROC 0.912, AUPRC 0.941 |
 
-Six model families compared (RF, XGBoost, MLP, GCN, GIN, ChemBERTa), with applicability domain checks, external validation after removing overlapping molecules, and a CLI, API, web demo and Docker image under the MIT License.
+A molecule outside the training chemical space is far less reliable, and the framework flags it. Random Forest AUROC inside vs outside the applicability domain:
+
+<img src="assets/trust-ad.svg" width="100%" alt="Random Forest test AUROC inside vs outside the applicability domain: BBBP 0.943 vs 0.801, ClinTox 0.909 vs 0.706, Tox21 NR-AR 0.812 vs 0.718, Tox21 SR-p53 0.830 vs 0.716." />
+
+<img src="https://raw.githubusercontent.com/sshemanth/trust-admet/main/paper/figures/Figure6_GIN_GNNExplainer.png" width="60%" alt="GNNExplainer highlighting the atoms a GIN model used for a molecular property prediction." />
+
+Explainability check: GNNExplainer marks the atoms a GIN model relied on. Everything ships as a CLI, FastAPI service, Gradio demo and Docker image under the MIT License.
 
 ### [Multi-label knee MRI abnormality detection from report-derived labels](https://github.com/sshemanth/knee-mri-weak-supervision)
 

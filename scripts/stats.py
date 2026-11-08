@@ -26,7 +26,7 @@ query($login:String!){ user(login:$login){
   }
   repositories(ownerAffiliations:OWNER, isFork:false, privacy:PUBLIC, first:100){
     totalCount
-    nodes{ stargazerCount languages(first:8, orderBy:{field:SIZE,direction:DESC}){ edges{ size node{ name } } } }
+    nodes{ languages(first:8, orderBy:{field:SIZE,direction:DESC}){ edges{ size node{ name } } } }
   }
 }}"""
 
@@ -43,7 +43,9 @@ def fetch():
         sys.exit(f"GraphQL error: {d['errors']}")
     u = d["data"]["user"]
     cc = u["contributionsCollection"]
-    weeks = [sum(day["contributionCount"] for day in w["contributionDays"]) for w in cc["contributionCalendar"]["weeks"]]
+    cal = cc["contributionCalendar"]["weeks"]
+    weeks = [sum(day["contributionCount"] for day in w["contributionDays"]) for w in cal]
+    active = sum(1 for w in cal for day in w["contributionDays"] if day["contributionCount"] > 0)
     langs = Counter()
     for n in u["repositories"]["nodes"]:
         for e in n["languages"]["edges"]:
@@ -52,7 +54,7 @@ def fetch():
         "contrib": cc["contributionCalendar"]["totalContributions"],
         "commits": cc["totalCommitContributions"],
         "repos": u["repositories"]["totalCount"],
-        "stars": sum(n["stargazerCount"] for n in u["repositories"]["nodes"]),
+        "active": active,
         "weeks": weeks,
         "langs": langs.most_common(),
     }
@@ -62,7 +64,7 @@ def render(s):
     W, H = 1200, 300
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
            f'aria-label="GitHub activity: {s["contrib"]} contributions in the last year, {s["commits"]} commits, '
-           f'{s["repos"]} public repositories, {s["stars"]} stars.">',
+           f'{s["repos"]} public repositories, {s["active"]} active days.">',
            "<style>.up{opacity:0;animation:up .7s cubic-bezier(.2,.7,.2,1) forwards}"
            "@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}"
            ".bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:g .8s cubic-bezier(.2,.8,.2,1) forwards}"
@@ -71,7 +73,7 @@ def render(s):
            f'<rect width="{W}" height="{H}" rx="18" fill="{BG}" stroke="{LINE}"/>',
            f'<text x="30" y="40" font-family="{MONO}" font-size="13" fill="#7FA6E0">gh api graphql · updated daily</text>',
            f'<text x="30" y="64" font-family="{SANS}" font-size="19" font-weight="700" fill="{INK}">GitHub activity, last 12 months</text>']
-    tiles = [(s["contrib"], "contributions"), (s["commits"], "commits"), (s["repos"], "public repos"), (s["stars"], "stars")]
+    tiles = [(s["contrib"], "contributions"), (s["commits"], "commits"), (s["repos"], "public repos"), (s["active"], "active days")]
     for i, (v, lab) in enumerate(tiles):
         x, y = 30 + (i % 2) * 170, 88 + (i // 2) * 96
         out.append(f'<g class="up" style="animation-delay:{.1+i*.1:.1f}s"><rect x="{x}" y="{y}" width="158" height="84" rx="12" fill="{CARD}" stroke="{LINE}"/>'
@@ -116,7 +118,7 @@ def render(s):
 if __name__ == "__main__":
     if "--demo" in sys.argv:
         import random
-        data = {"contrib": 812, "commits": 640, "repos": 14, "stars": 9,
+        data = {"contrib": 812, "commits": 640, "repos": 14, "active": 120,
                 "weeks": [random.randint(0, 40) for _ in range(53)],
                 "langs": [("Python", 900), ("Jupyter Notebook", 500), ("TypeScript", 200), ("Shell", 60), ("HTML", 40), ("CSS", 20)]}
         out = os.path.join(os.path.dirname(__file__), "..", "_demo-stats.svg")

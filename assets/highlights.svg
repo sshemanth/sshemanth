@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150" role="img" aria-label="Highlights: TC lesion-wise Dice 0.715 on the BraTS-METS hidden test; 2.7 times better resection cavity Dice with Primus; AUROC 0.912 on external B3DB for TRUST-ADMET; 3 MICCAI manuscripts reviewed.">
+<style>
+.up{opacity:0;animation:up .7s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+@media (prefers-reduced-motion: reduce){.up{opacity:1}}
+</style>
+  <g class="up" style="animation-delay:0.15s">
+    <rect x="0.0" y="10" width="282" height="130" rx="14" fill="#0F1D36" stroke="#22345A"/>
+    <rect x="22.0" y="24" width="44" height="3" rx="1.5" fill="#4F8CFF"/>
+    <text x="22.0" y="74" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#E6EDF7">0.715</text>
+    <text x="22.0" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#E6EDF7">TC lesion-wise Dice</text>
+    <text x="22.0" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#9FB2CC">BraTS-METS hidden test</text>
+  </g>
+  <g class="up" style="animation-delay:0.30s">
+    <rect x="306.0" y="10" width="282" height="130" rx="14" fill="#0F1D36" stroke="#22345A"/>
+    <rect x="328.0" y="24" width="44" height="3" rx="1.5" fill="#C0841C"/>
+    <text x="328.0" y="74" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#E6EDF7">2.7×</text>
+    <text x="328.0" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#E6EDF7">resection cavity Dice gain</text>
+    <text x="328.0" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#9FB2CC">Primus vs nnU-Net</text>
+  </g>
+  <g class="up" style="animation-delay:0.45s">
+    <rect x="612.0" y="10" width="282" height="130" rx="14" fill="#0F1D36" stroke="#22345A"/>
+    <rect x="634.0" y="24" width="44" height="3" rx="1.5" fill="#1F9E8F"/>
+    <text x="634.0" y="74" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#E6EDF7">0.912</text>
+    <text x="634.0" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#E6EDF7">AUROC, external B3DB</text>
+    <text x="634.0" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#9FB2CC">TRUST-ADMET, N = 6,482</text>
+  </g>
+  <g class="up" style="animation-delay:0.60s">
+    <rect x="918.0" y="10" width="282" height="130" rx="14" fill="#0F1D36" stroke="#22345A"/>
+    <rect x="940.0" y="24" width="44" height="3" rx="1.5" fill="#D9536B"/>
+    <text x="940.0" y="74" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#E6EDF7">3</text>
+    <text x="940.0" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#E6EDF7">MICCAI manuscripts</text>
+    <text x="940.0" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#9FB2CC">reviewed for the challenge</text>
+  </g>
+</svg>

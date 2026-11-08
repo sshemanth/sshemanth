@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="ct cd">
+<title id="ct">Primus with cavity-focused sampling vs standard nnU-Net</title>
+<desc id="cd">Dice on the same 260 cases. Standard nnU-Net: WT 0.747, TC 0.752, ET 0.721, RC 0.184. Primus with RC sampling: WT 0.760, TC 0.767, ET 0.734, RC 0.495.</desc>
+<style>
+.bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:grow .9s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes grow{to{transform:scaleY(1)}}
+.lab{opacity:0;animation:fade .5s ease-out forwards}
+@keyframes fade{to{opacity:1}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+@media (prefers-reduced-motion: reduce){.bar{transform:none}.lab{opacity:1}}
+</style>
+<rect width="1200" height="400" rx="18" fill="#0C1830" stroke="#22345A"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <text x="50" y="48" font-size="20" font-weight="700" fill="#E6EDF7">Resection cavity Dice, 0.18 → 0.50</text>
+  <text x="50" y="72" font-size="14" fill="#9FB2CC">Dice on the same 260 cases, Primus + cavity-focused sampling vs standard nnU-Net</text>
+  <g transform="translate(780,40)">
+    <rect width="12" height="12" rx="3" fill="#6B7A90"/><text x="20" y="11" font-size="13" fill="#9FB2CC">Standard nnU-Net</text>
+    <rect x="160" width="12" height="12" rx="3" fill="#4F8CFF"/><text x="180" y="11" font-size="13" fill="#E6EDF7">Primus + RC sampling</text>
+  </g>
+  <line x1="110" x2="1140" y1="282.5" y2="282.5" stroke="#22345A" stroke-width="1"/><text x="96" y="286.5" text-anchor="end" font-size="12" fill="#9FB2CC">0.25</text><line x1="110" x2="1140" y1="225.0" y2="225.0" stroke="#22345A" stroke-width="1"/><text x="96" y="229.0" text-anchor="end" font-size="12" fill="#9FB2CC">0.50</text><line x1="110" x2="1140" y1="167.5" y2="167.5" stroke="#22345A" stroke-width="1"/><text x="96" y="171.5" text-anchor="end" font-size="12" fill="#9FB2CC">0.75</text><line x1="110" x2="1140" y1="110.0" y2="110.0" stroke="#22345A" stroke-width="1"/><text x="96" y="114.0" text-anchor="end" font-size="12" fill="#9FB2CC">1.00</text>
+  <line x1="110" x2="1140" y1="340" y2="340" stroke="#3A4E74" stroke-width="1"/>
+  <path class="bar" style="animation-delay:0.30s" d="M173.75,340 V172.19 Q173.75,168.19 177.75,168.19 H233.75 Q237.75,168.19 237.75,172.19 V340 Z" fill="#6B7A90"/><path class="bar" style="animation-delay:0.45s" d="M239.75,340 V169.2 Q239.75,165.2 243.75,165.2 H299.75 Q303.75,165.2 303.75,169.2 V340 Z" fill="#4F8CFF"/><text class="lab" style="animation-delay:1.20s" x="205.75" y="158.19" text-anchor="middle" font-size="13" fill="#9FB2CC">0.747</text><text class="lab" style="animation-delay:1.30s" x="271.75" y="155.2" text-anchor="middle" font-size="13" font-weight="700" fill="#E6EDF7">0.760</text><text x="238.75" y="368" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#E6EDF7">WT</text><path class="bar" style="animation-delay:0.42s" d="M431.25,340 V171.04 Q431.25,167.04 435.25,167.04 H491.25 Q495.25,167.04 495.25,171.04 V340 Z" fill="#6B7A90"/><path class="bar" style="animation-delay:0.57s" d="M497.25,340 V167.59 Q497.25,163.59 501.25,163.59 H557.25 Q561.25,163.59 561.25,167.59 V340 Z" fill="#4F8CFF"/><text class="lab" style="animation-delay:1.30s" x="463.25" y="157.04" text-anchor="middle" font-size="13" fill="#9FB2CC">0.752</text><text class="lab" style="animation-delay:1.40s" x="529.25" y="153.59" text-anchor="middle" font-size="13" font-weight="700" fill="#E6EDF7">0.767</text><text x="496.25" y="368" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#E6EDF7">TC</text><path class="bar" style="animation-delay:0.54s" d="M688.75,340 V178.17000000000002 Q688.75,174.17000000000002 692.75,174.17000000000002 H748.75 Q752.75,174.17000000000002 752.75,178.17000000000002 V340 Z" fill="#6B7A90"/><path class="bar" style="animation-delay:0.69s" d="M754.75,340 V175.18 Q754.75,171.18 758.75,171.18 H814.75 Q818.75,171.18 818.75,175.18 V340 Z" fill="#4F8CFF"/><text class="lab" style="animation-delay:1.40s" x="720.75" y="164.17000000000002" text-anchor="middle" font-size="13" fill="#9FB2CC">0.721</text><text class="lab" style="animation-delay:1.50s" x="786.75" y="161.18" text-anchor="middle" font-size="13" font-weight="700" fill="#E6EDF7">0.734</text><text x="753.75" y="368" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#E6EDF7">ET</text><path class="bar" style="animation-delay:0.66s" d="M946.25,340 V301.68 Q946.25,297.68 950.25,297.68 H1006.25 Q1010.25,297.68 1010.25,301.68 V340 Z" fill="#6B7A90"/><path class="bar" style="animation-delay:0.81s" d="M1012.25,340 V230.15 Q1012.25,226.15 1016.25,226.15 H1072.25 Q1076.25,226.15 1076.25,230.15 V340 Z" fill="#4F8CFF"/><text class="lab" style="animation-delay:1.50s" x="978.25" y="287.68" text-anchor="middle" font-size="13" fill="#9FB2CC">0.184</text><text class="lab" style="animation-delay:1.60s" x="1044.25" y="216.15" text-anchor="middle" font-size="13" font-weight="700" fill="#E6EDF7">0.495</text><text x="1011.25" y="368" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#E6EDF7">RC</text>
+  <g class="lab" style="animation-delay:1.9s">
+      <path d="M1084.25,232.15 q30,0 30,30" fill="none" stroke="#C0841C" stroke-width="1.4"/>
+      <text x="1088.25" y="282.15" font-size="13" font-weight="700" fill="#E9B25A">0.18 → 0.50</text>
+    </g>
+</g>
+</svg>

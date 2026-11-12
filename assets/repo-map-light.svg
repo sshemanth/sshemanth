@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-label="brain-tumor-segmentation, the challenge model, feeds brats-mets-primus-rc, which reuses its trainer and loss; that repository hands its patient-grouped splits to the lesion-level guarantees work, which is in progress.">
+<rect x=".5" y=".5" width="1199" height="249" rx="14" fill="#F7F7F4" stroke="#D7E0E6"/>
+<text x="40" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#62676C">How the brain metastasis repositories build on each other</text>
+<rect x="40" y="52" width="300" height="172" rx="12" fill="#FFFFFF" stroke="#D7E0E6" stroke-width="1.2"/>
+<text x="60" y="86" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#18324A">brain-tumor-segmentation</text>
+<text x="60" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#62676C">Challenge model, MICCAI 2026</text>
+<line x1="60" y1="124" x2="320" y2="124" stroke="#D7E0E6"/>
+<circle cx="64" cy="148" r="2.5" fill="#62676C"/>
+<text x="76" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#3E4449">Region-aware nnU-Net v2 trainer</text>
+<circle cx="64" cy="172" r="2.5" fill="#62676C"/>
+<text x="76" y="176" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#3E4449">Cavity thresholds, post-processing</text>
+<circle cx="64" cy="196" r="2.5" fill="#62676C"/>
+<text x="76" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#3E4449">Docker inference image</text>
+<rect x="450" y="52" width="300" height="172" rx="12" fill="#FFFFFF" stroke="#D7E0E6" stroke-width="1.2"/>
+<text x="470" y="86" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#18324A">brats-mets-primus-rc</text>
+<text x="470" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#62676C">Follow-up on missed cavities</text>
+<line x1="470" y1="124" x2="730" y2="124" stroke="#D7E0E6"/>
+<circle cx="474" cy="148" r="2.5" fill="#62676C"/>
+<text x="486" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#3E4449">Primus V3-S trainer, cavity sampling</text>
+<circle cx="474" cy="172" r="2.5" fill="#62676C"/>
+<text x="486" y="176" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#3E4449">CNN + transformer ensemble</text>
+<circle cx="474" cy="196" r="2.5" fill="#62676C"/>
+<text x="486" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#3E4449">Leakage and longitudinal checks</text>
+<rect x="860" y="52" width="300" height="172" rx="12" fill="#FFFFFF" stroke="#D7E0E6" stroke-width="1.2" stroke-dasharray="5 5"/>
+<text x="880" y="86" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#18324A">lesion-level guarantees</text>
+<text x="880" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#62676C">In progress, not yet public</text>
+<line x1="880" y1="124" x2="1140" y2="124" stroke="#D7E0E6"/>
+<circle cx="884" cy="148" r="2.5" fill="#62676C"/>
+<text x="896" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#3E4449">Conformal prediction per lesion</text>
+<circle cx="884" cy="172" r="2.5" fill="#62676C"/>
+<text x="896" y="176" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#3E4449">Trained from scratch</text>
+<circle cx="884" cy="196" r="2.5" fill="#62676C"/>
+<text x="896" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#3E4449">Patient-grouped splits only</text>
+<path id="l0" d="M346 138.0 L442 138.0" stroke="#18324A" stroke-width="1.6" fill="none"/>
+<path d="M435 133.0 L442 138.0 L435 143.0" stroke="#18324A" stroke-width="1.6" fill="none"/>
+<circle r="3" fill="#2F78C4"><animateMotion dur="2.6s" begin="0.0s" repeatCount="indefinite"><mpath href="#l0"/></animateMotion></circle>
+<text x="394.0" y="108.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#62676C">reuses the trainer</text>
+<text x="394.0" y="123.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#62676C">and loss</text>
+<path id="l1" d="M756 138.0 L852 138.0" stroke="#18324A" stroke-width="1.6" fill="none"/>
+<path d="M845 133.0 L852 138.0 L845 143.0" stroke="#18324A" stroke-width="1.6" fill="none"/>
+<circle r="3" fill="#2F78C4"><animateMotion dur="2.6s" begin="1.3s" repeatCount="indefinite"><mpath href="#l1"/></animateMotion></circle>
+<text x="804.0" y="108.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#62676C">hands over</text>
+<text x="804.0" y="123.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#62676C">grouped splits</text>
+</svg>

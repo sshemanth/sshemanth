@@ -1,36 +1,33 @@
+I keep the code for my medical imaging research here. The results and the reasoning behind each project are on my [portfolio](https://sshemanth.github.io/my-portfolio/). This page is for finding the code, running it and reusing parts of it.
+
+## Repositories
+
+| Repository | What is inside | Runs with |
+|---|---|---|
+| [brain-tumor-segmentation](https://github.com/sshemanth/brain-tumor-segmentation) | Region-aware nnU-Net v2 trainer for BraTS-METS 2026, cavity threshold tuning, post-processing and the Docker image used for the challenge. Code for the [MICCAI 2026 paper](https://papers.miccai.org/miccai-2026-sat/BraTS_METS_008.html) | nnU-Net v2, Conda, Docker |
+| [brats-mets-primus-rc](https://github.com/sshemanth/brats-mets-primus-rc) | Primus V3-S trainer with cavity-focused sampling, CNN and transformer ensemble inference, bootstrap comparisons, patient leakage and longitudinal checks | nnU-Net v2 from GitHub, Docker |
+| [knee-mri-weak-supervision](https://github.com/sshemanth/knee-mri-weak-supervision) | Three radiology report labellers, label fusion, a DICOM slice cache and 2.5D ConvNeXt training for the RSNA 2026 knee challenge | Kaggle notebooks, Ollama for the local Qwen labeller |
+| [multimodal-lesion-diagnosis](https://github.com/sshemanth/multimodal-lesion-diagnosis) | Dual-image and metadata fusion package for MILK10k, YAML configs, rare-class oversampling and out-of-fold ensemble weight search | Google Cloud GPU or AWS SageMaker, Weights & Biases, Docker |
+| [trust-admet](https://github.com/sshemanth/trust-admet) | Six molecular property model families with calibration, applicability domain, conformal and uncertainty modules, served as a CLI, FastAPI service and Gradio app. [Archived on Zenodo](https://doi.org/10.5281/zenodo.20997792) | pip, Docker |
+
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg" />
-  <img src="assets/header-light.svg" width="100%" alt="Sri Sai Hemanth Bollepalli, medical AI researcher. Brain metastasis segmentation on MRI, MICCAI 2026 BraTS-METS." />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/repo-map-dark.svg" />
+  <img src="assets/repo-map-light.svg" width="100%" alt="brain-tumor-segmentation, the challenge model, feeds brats-mets-primus-rc, which reuses its trainer and loss. That repository hands its patient-grouped splits to the lesion-level guarantees work, which is in progress." />
 </picture>
 
-My recent work segments brain metastases on post-treatment MRI, including the resection cavity left after surgery, which is the hardest region for standard models. I also work with knee MRI, dermatology images, 12-lead ECGs and molecular property prediction. In each project I look for the cases where the model fails and check whether its results hold on data it was never tuned on.
+## Parts you can reuse
 
-[Portfolio](https://sshemanth.github.io/my-portfolio/) · [MICCAI 2026 paper](https://papers.miccai.org/miccai-2026-sat/BraTS_METS_008.html) · [LinkedIn](https://www.linkedin.com/in/sshemanth/) · [Email](mailto:sshemanthofficial@gmail.com)
+These come from repositories with an open licence.
 
-## Research path
+- An nnU-Net v2 trainer with the region-aware Tversky and BCE loss: [`nnUNetTrainerCoreCavityV3ResEncL.py`](https://github.com/sshemanth/brats-mets-primus-rc/blob/main/nnunet_trainers/nnUNetTrainerCoreCavityV3ResEncL.py)
+- A Primus V3-S trainer that samples resection cavity patches more often: [`nnUNetTrainerPrimusV3S_RegionAwareRC.py`](https://github.com/sshemanth/brats-mets-primus-rc/blob/main/nnunet_trainers/nnUNetTrainerPrimusV3S_RegionAwareRC.py)
+- Five-fold BraTS-METS 2026 splits grouped by patient, so no patient is in both training and validation: [`splits_final_grouped.json`](https://github.com/sshemanth/brats-mets-primus-rc/blob/main/results/fold0/splits_final_grouped.json)
+- A rule-based labeller for knee MRI reports in six languages, with a negation check: [`regex_labeler.py`](https://github.com/sshemanth/knee-mri-weak-supervision/blob/main/labelling/regex_labeler.py)
+- Applicability domain, conformal prediction and uncertainty modules for molecular models: [`trust_admet/trust`](https://github.com/sshemanth/trust-admet/tree/main/src/trust_admet/trust)
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/research-path-dark.svg" />
-  <img src="assets/research-path-light.svg" width="100%" alt="Research path in three steps: challenge paper at MICCAI 2026, research project on missed resection cavities, and current work on lesion-level guarantees." />
-</picture>
+## Not public yet
 
-1. **Challenge paper, MICCAI 2026.** [Region-Aware Residual Encoder nnU-Net for Multi-Region Brain Metastasis Segmentation](https://papers.miccai.org/miccai-2026-sat/BraTS_METS_008.html) ([code](https://github.com/sshemanth/brain-tumor-segmentation)). A five-fold residual encoder nnU-Net with a region-weighted Tversky and BCE loss. On the official validation platform, resection cavity instance F1 rose from 0.238 to 0.586 against a standard nnU-Net. Lesions under 27 mm³ did not improve.
-2. **Research project, supervised by Associate Professor Steve Ling.** [Recovering missed resection cavities](https://github.com/sshemanth/brats-mets-primus-rc). A Primus transformer trained with cavity-focused sampling and averaged with the challenge model found 34 of 45 cavities on one fold, up from 30. Most of the remaining misses had probabilities below 0.1, and the original folds put scans of the same patient on both sides of the split.
-3. **Now.** Lesion-level conformal guarantees for post-treatment brain metastasis segmentation, trained from scratch on patient-grouped splits.
+- Lesion-level conformal guarantees for post-treatment brain metastasis segmentation, the next step after brats-mets-primus-rc.
+- Atrial fibrillation detection from 12-lead ECGs, trained on PTB-XL and tested on Chapman-Shaoxing and Georgia, with attribution and counterfactual tests. It runs on Apple Silicon or CUDA.
 
-## Other projects
-
-| Project | Result |
-|---|---|
-| [Knee MRI from report-derived labels](https://github.com/sshemanth/knee-mri-weak-supervision) | 0.880 macro AUC on the RSNA 2026 hidden test set, trained without expert image labels |
-| [TRUST-ADMET](https://github.com/sshemanth/trust-admet) | Molecular property prediction with calibration and applicability-domain checks. AUROC 0.912 on external B3DB. [Zenodo](https://doi.org/10.5281/zenodo.20997792) |
-| [Multimodal skin lesion diagnosis](https://github.com/sshemanth/multimodal-lesion-diagnosis) | 0.515 official MILK10k score from a ConvNeXt and EfficientNet ensemble |
-| AF detection from 12-lead ECG | In progress. Tests whether detectors use atrial signs or only beat timing, across three hospitals |
-
-## Tools
-
-Python, PyTorch, nnU-Net, Hugging Face Transformers, scikit-learn, Docker, Weights & Biases, AWS SageMaker, Google Cloud
-
-## Contact
-
-I am looking for a PhD position in medical image analysis. Reach me at [sshemanthofficial@gmail.com](mailto:sshemanthofficial@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/sshemanth/).
+Questions about the code, or a bug: open an issue in the repository. Anything else: [sshemanthofficial@gmail.com](mailto:sshemanthofficial@gmail.com) or [LinkedIn](https://www.linkedin.com/in/sshemanth/).
